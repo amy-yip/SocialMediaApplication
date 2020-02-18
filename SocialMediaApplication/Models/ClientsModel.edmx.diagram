@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9dae56c750bc4d11833d95c926e5a068" Name="Diagram1">
+        <EntityTypeShape EntityType="ClientsModel.Address" Width="1.5" PointX="5.25" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClientsModel.Comment" Width="1.5" PointX="7.5" PointY="18.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClientsModel.Comment_Like" Width="1.5" PointX="9.75" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClientsModel.Contact" Width="1.5" PointX="5.25" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClientsModel.Country" Width="1.5" PointX="3" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClientsModel.FriendLink" Width="1.5" PointX="5.25" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClientsModel.Like" Width="1.5" PointX="10.5" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClientsModel.Message" Width="1.5" PointX="5.25" PointY="23.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClientsModel.Picture" Width="1.5" PointX="5.25" PointY="26.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClientsModel.Profile" Width="1.5" PointX="3" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClientsModel.User" Width="1.5" PointX="0.75" PointY="12.25" IsExpanded="true" />
+        <AssociationConnector Association="ClientsModel.FK_Address_ToCountries" ManuallyRouted="false" />
+        <AssociationConnector Association="ClientsModel.FK_Address_ToProfile" ManuallyRouted="false" />
+        <AssociationConnector Association="ClientsModel.FK_Comment_Like_ToComment" ManuallyRouted="false" />
+        <AssociationConnector Association="ClientsModel.FK_Comment_ToPicture" ManuallyRouted="false" />
+        <AssociationConnector Association="ClientsModel.FK_Comment_ToProfile" ManuallyRouted="false" />
+        <AssociationConnector Association="ClientsModel.FK_Comment_Like_ToProfile" ManuallyRouted="false" />
+        <AssociationConnector Association="ClientsModel.FK_Contact_ToProfile" ManuallyRouted="false" />
+        <AssociationConnector Association="ClientsModel.FK_FriendLink_ToRequested" ManuallyRouted="false" />
+        <AssociationConnector Association="ClientsModel.FK_FriendLink_ToRequester" ManuallyRouted="false" />
+        <AssociationConnector Association="ClientsModel.FK_Like_ToPicture" ManuallyRouted="false" />
+        <AssociationConnector Association="ClientsModel.FK_Like_ToProfile" ManuallyRouted="false" />
+        <AssociationConnector Association="ClientsModel.FK_Message_Receiver" ManuallyRouted="false" />
+        <AssociationConnector Association="ClientsModel.FK_Message_Sender" ManuallyRouted="false" />
+        <AssociationConnector Association="ClientsModel.FK_Picture_ToProfile" ManuallyRouted="false" />
+        <AssociationConnector Association="ClientsModel.FK_Profile_ToPicture" ManuallyRouted="false" />
+        <AssociationConnector Association="ClientsModel.FK_Profile_ToUser" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
