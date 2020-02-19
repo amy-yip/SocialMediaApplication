@@ -24,6 +24,12 @@ namespace SocialMediaApplication.Controllers
             return View(database.Profiles);
         }
 
+        public ActionResult Search(string name)
+        {
+            IEnumerable<Models.Profile> result = database.Profiles.Where(p => (p.first_name + " " + p.last_name).Contains(name));
+            return View("Index", result);
+        }
+
         // GET: Profile/Details/5
         public ActionResult Details(int id)
         {

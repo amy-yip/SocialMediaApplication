@@ -4,66 +4,78 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h3>
+    Username
+</h3>
 
-<p>
-   
-</p>
 <table class="table">
     <tr>
+        <th>
+            <p>
+                @Html.ActionLink("See Your Profile", "Profile")
+            </p>
+        </th>
+        <th>
+            <p>
+                @Html.ActionLink("Create Post", "Create")
+            </p>
+        </th>
+        <th>
+            <p>
+                @Html.ActionLink("Friend Requests", "Requests")
+            </p>
+        </th>
+        <th>
+            <p>
+                @Html.ActionLink("Messages", "Messages")
+            </p>
+        </th>
+    </tr>
+</table>
+
+<table class="table">
+    <tr>
+        <th>
+            <form method="get" action="/Home/Search">
+                <label> Search: </label> <input type="text" name="name" /> <input type="submit" name="search" value="Search" class="btn btn-default" />
+            </form>
+        </th>
+    </tr>
+</table>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Picture.path)
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.User.username)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.first_name)
+            <p>Likes</p>
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.last_name)
+            <p>Comments</p>
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.notes)
+            <p>Send a friend/follow request</p>
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.gender)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.privacy)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Picture.path)
-        </th>
-        <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.User.username)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.first_name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.last_name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.notes)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.gender)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.privacy)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Picture.path)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.profile_id }) |
-            @Html.ActionLink("Details", "Details", new { id = item.profile_id }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.profile_id })
-        </td>
-    </tr>
-}
-
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Picture.path)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.User.username)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.profile_id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.profile_id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.profile_id })
+            </td>
+        </tr>
+    }
 </table>
