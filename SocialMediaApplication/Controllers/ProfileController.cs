@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SocialMediaApplication.ActionFilters;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -6,6 +7,7 @@ using System.Web.Mvc;
 
 namespace SocialMediaApplication.Controllers
 {
+    [LoginFilter]
     public class ProfileController : Controller
     {
         Models.ClientsEntities database = new Models.ClientsEntities();
@@ -13,33 +15,36 @@ namespace SocialMediaApplication.Controllers
         // GET: Profile
         public ActionResult Index()
         {
+            /*
             if(Session["user_id"] == null)
             {
                 return RedirectToAction("Index", "Home");
             }
-
+            */
             return View(database.Profiles);
         }
 
         // GET: Profile/Details/5
         public ActionResult Details(int id)
         {
+            /*
             if(Session["user_id"] == null)
             {
                 return RedirectToAction("Index", "Home");
             }
-
+            */
             return View();
         }
 
         // GET: Profile/Create
         public ActionResult Create()
         {
+            /*
             if(Session["user_id"] == null)
             {
                 return RedirectToAction("Index", "Home");
             }
-
+            */
             return View();
         }
 
@@ -47,12 +52,12 @@ namespace SocialMediaApplication.Controllers
         [HttpPost]
         public ActionResult Create(FormCollection collection)
         {
-
+            /*
             if (Session["user_id"] == null)
             {
                 return RedirectToAction("Index", "Home");
             }
-
+            */
             try
             {
                 // TODO: Add insert logic here
